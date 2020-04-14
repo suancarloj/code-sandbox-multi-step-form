@@ -1,0 +1,44 @@
+.App {
+  font-family: sans-serif;
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-enter {
+  animation-duration: 1.6s;
+  /* animation-fill-mode: both; */
+}
+
+.fade-exit {
+  animation-duration: 1s;
+  /* animation-fill-mode: both; */
+}
+
+.fade-enter.fade-enter-active {
+  animation-name: fadeInRight;
+}
+
+.fade-exit.fade-exit-active {
+  animation-name: fadeOutLeft;
+}
